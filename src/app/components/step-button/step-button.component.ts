@@ -8,12 +8,13 @@ import {ElevatorsApiService} from '../../services/elevators-api.service';
 })
 export class StepButtonComponent implements OnInit {
 
-  constructor(private elevatorsAPI: ElevatorsApiService) { }
+  constructor(private elevatorsAPI: ElevatorsApiService, private updateService: UpdateService) { }
 
   ngOnInit() {
   }
 
   step() {
     this.elevatorsAPI.getStep();
+    this.updateService.showUpdateButtonComponent = false;
   }
 }
