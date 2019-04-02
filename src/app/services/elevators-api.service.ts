@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
 
 
 export class ElevatorsApiService {
+  // serverHostname = 'http://localhost:8080';
   serverHostname = 'https://elevator-control.herokuapp.com';
   constructor(private http: HttpClient) {
   }
