@@ -1,7 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {throwError} from 'rxjs';
-import {catchError, retry} from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +7,7 @@ import {catchError, retry} from 'rxjs/operators';
 
 
 export class ElevatorsApiService {
-  serverHostname = 'http://localhost:8080';
+  serverHostname = 'https://elevator-control.herokuapp.com';
   constructor(private http: HttpClient) {
   }
 
@@ -41,7 +39,7 @@ export class ElevatorsApiService {
     });
   }
 
-  private handleError(error: HttpErrorResponse) {
+/*  private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
     } else {
@@ -51,5 +49,5 @@ export class ElevatorsApiService {
     }
     return throwError(
       'Something bad happened; please try again later.');
-  }
+  }*/
 }
