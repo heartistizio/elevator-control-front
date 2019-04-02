@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UpdateService} from './services/update.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'elevator-control-front';
+  title = 'Elevators';
+  constructor(public updateService: UpdateService) {}
 }

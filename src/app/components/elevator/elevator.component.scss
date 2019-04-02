@@ -1,7 +1,16 @@
 div {
-  background-color: #D9B310;
-  width: 10%;
-  height: 75%;
-  margin: 0 auto;
+  cursor: pointer;
+  width: 100%;
+  height: 90%;
 
+  &:hover {
+    background-color: #BFBFBF;
+  }
+  div {
+    background-color: #D9B310;
+    width: 10%;
+    height: 75%;
+    margin: 0 auto;
+
+  }
 }

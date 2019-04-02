@@ -1,3 +1,6 @@
-<p>
-  update-buttons works!
-</p>
+<div>
+  <p> Elevator {{elevator.id}} </p>
+  <div>
+    <button *ngFor="let floor of floorNumbers" (click)="update(floor)">{{floor}}</button>
+  </div>
+</div>

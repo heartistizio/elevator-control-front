@@ -1,4 +1,5 @@
 <div>
-<app-step-button></app-step-button>
-<app-building></app-building>
+  <app-step-button></app-step-button>
+  <app-building></app-building>
+  <app-update-buttons *ngIf="updateService.showUpdateButtonComponent" [elevator]="updateService.elevator"></app-update-buttons>
 </div>
