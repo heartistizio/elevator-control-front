@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ElevatorsApiService} from '../../services/elevators-api.service';
+import {UpdateService} from '../../services/update.service';
 
 @Component({
   selector: 'app-step-button',
