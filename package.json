@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,9 @@
     "add": "^2.0.6",
     "angular-font-awesome": "^3.1.2",
     "core-js": "^2.5.4",
+    "enhanced-resolve": "3.3.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "yarn": "^1.15.2",
@@ -54,6 +57,6 @@
   },
   "engines": {
     "node": "10.15.0",
-    "yarn": "1.13.0"
+    "npm": "6.4.1"
   }
 }
