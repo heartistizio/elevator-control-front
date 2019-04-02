@@ -1,4 +1,9 @@
-<li *ngFor="let floor of floorNumbers">
-  <app-pickup-button [floor]="floor"></app-pickup-button>
-  Floor {{floor}}
-</li>
+<ul>
+  <li *ngFor="let floor of floorNumbers">
+    <div class="floorDesc">
+      {{floor}}
+      <app-pickup-button [floor]="floor"></app-pickup-button>
+    </div>
+    <app-floor *ngFor="let elevator of this.elevatorsAPI.getElevatorList()" [elevator]="elevator" [floorNumber]="floor"></app-floor>
+  </li>
+</ul>

@@ -7,11 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FloorComponent implements OnInit {
 
-  @Input() shaft;
-
+  @Input() elevator;
+  @Input() floorNumber;
+  isElevator: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.isElevator =  this.elevator.currentFloor === this.floorNumber;
   }
 
 }

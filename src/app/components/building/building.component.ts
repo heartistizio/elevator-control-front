@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ElevatorsApiService } from '../../services/elevators-api.service';
 
 @Component({
   selector: 'app-building',
@@ -7,9 +6,8 @@ import { ElevatorsApiService } from '../../services/elevators-api.service';
   styleUrls: ['./building.component.scss']
 })
 export class BuildingComponent implements OnInit {
-  constructor(public elevatorsAPI: ElevatorsApiService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.elevatorsAPI.getElevators();
   }
 }

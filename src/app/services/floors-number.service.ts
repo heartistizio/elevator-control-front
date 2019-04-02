@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class FloorsNumberService {
 
-  floorNumber = 10;
+  floorNumber = 9;
   constructor() { }
   getFloorNumber() {
     return this.floorNumber;

@@ -1,4 +1,28 @@
-li {
+ul {
+  list-style-type: none;
   display: flex;
   flex-direction: column-reverse;
+  padding: 0;
+
+  li {
+    display: flex;
+    height: 8.5rem;
+    color: #1D2731;
+
+    border-top: 0.2rem #1D2731 solid;
+    border-bottom: .2rem #1D2731 solid;
+    .floorDesc {
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      width: 8.5rem;
+      height: 8.5rem;
+      background-color: #CCCCCC;
+    }
+  }
 }
+

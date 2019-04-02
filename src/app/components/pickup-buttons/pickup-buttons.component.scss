@@ -1,0 +1,8 @@
+button {
+  background: 0;
+  border: .1rem #1D2731 solid;
+
+  &.clicked {
+    background-color: red;
+  }
+}

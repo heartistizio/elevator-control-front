@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FloorsNumberService } from '../../services/floors-number.service';
+import {Component, OnInit} from '@angular/core';
+import {FloorsNumberService} from '../../services/floors-number.service';
+import {ElevatorsApiService} from '../../services/elevators-api.service';
 
 @Component({
   selector: 'app-floor-list',
@@ -7,11 +8,13 @@ import { FloorsNumberService } from '../../services/floors-number.service';
   styleUrls: ['./floor-list.component.scss']
 })
 export class FloorListComponent implements OnInit {
-  floorNumbers;
-  constructor(private floorNumberData: FloorsNumberService) { }
+  floorNumbers: object;
 
-  ngOnInit() {
-    this.floorNumbers =  Array(this.floorNumberData.getFloorNumber()).fill(0).map((x, i) => i);
+  constructor(private floorNumberData: FloorsNumberService, public elevatorsAPI: ElevatorsApiService) {
   }
 
+  ngOnInit() {
+    this.elevatorsAPI.getElevators();
+    this.floorNumbers =  Array(this.floorNumberData.getFloorNumber()).fill(0).map((x, i) => i);
+  }
 }
